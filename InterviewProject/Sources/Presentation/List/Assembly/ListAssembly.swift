@@ -5,13 +5,13 @@ import RxSwift
 
 class ListAssembly : ListAssemblyProtocol {
     
-    static func createModule(_ navigationController: UINavigationController) -> UIViewController {
+    static func createModule(with dependencies: ListModuleDependencies) -> UIViewController {
         
         let disposeBag = DisposeBag()
         
-        let networkService = RatesNetworkService()
+        let networkService = RatesNetworkService(url: dependencies.url)
         let repository = RatesRepository(networkService: networkService)
-        let router = ListRouter(navigationController)
+        let router = ListRouter(dependencies.navigationController)
         let interactor = ListInteractor(repository)
         let presenter = ListPresenter(interactor, disposeBag, router)
         
