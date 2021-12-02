@@ -1,6 +1,7 @@
 
 import Foundation
 import RxSwift
+import Alamofire
 
 class RatesNetworkService: RatesNetworkServiceProtocol {
     
