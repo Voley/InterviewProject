@@ -11,7 +11,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         let nav = UINavigationController()
-        let rootController = ListAssembly.createModule(nav)
+        let dependencies = ListModuleDependencies(
+            url: URL(string: "https://www.cryptingup.com/api/markets/")!,
+            navigationController: nav
+        )
+        let rootController = ListAssembly.createModule(with: dependencies)
         nav.viewControllers = [rootController]
         window.rootViewController = nav
         window.backgroundColor = .white

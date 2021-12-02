@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C20795D2758B85B00C03D91 /* ListModuleDependencies.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C20795C2758B85B00C03D91 /* ListModuleDependencies.m */; };
 		4A47F31CC48A231EE81698F5 /* libPods-InterviewProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3C59F5919B6908A405785F /* libPods-InterviewProject.a */; };
 		E57AAC6727572797003A43CF /* DetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57AAC6627572797003A43CF /* DetailsProtocols.swift */; };
 		E57AAC69275727A9003A43CF /* DetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57AAC68275727A9003A43CF /* DetailsAssembly.swift */; };
@@ -59,6 +60,9 @@
 
 /* Begin PBXFileReference section */
 		096B33BB306431CB7BCBBBF7 /* Pods-InterviewProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewProject.debug.xcconfig"; path = "Target Support Files/Pods-InterviewProject/Pods-InterviewProject.debug.xcconfig"; sourceTree = "<group>"; };
+		3C20795A2758B85A00C03D91 /* InterviewProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		3C20795B2758B85B00C03D91 /* ListModuleDependencies.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListModuleDependencies.h; sourceTree = "<group>"; };
+		3C20795C2758B85B00C03D91 /* ListModuleDependencies.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListModuleDependencies.m; sourceTree = "<group>"; };
 		6F3C59F5919B6908A405785F /* libPods-InterviewProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InterviewProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57AAC6627572797003A43CF /* DetailsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsProtocols.swift; sourceTree = "<group>"; };
 		E57AAC68275727A9003A43CF /* DetailsAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsAssembly.swift; sourceTree = "<group>"; };
@@ -129,6 +133,15 @@
 				6F3C59F5919B6908A405785F /* libPods-InterviewProject.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C2079592758B83000C03D91 /* Dependecies */ = {
+			isa = PBXGroup;
+			children = (
+				3C20795B2758B85B00C03D91 /* ListModuleDependencies.h */,
+				3C20795C2758B85B00C03D91 /* ListModuleDependencies.m */,
+			);
+			path = Dependecies;
 			sourceTree = "<group>";
 		};
 		D4F2041C0FEE2BCB9D300623 /* Pods */ = {
@@ -234,6 +247,7 @@
 		E5ACF8C62755DB50009530E3 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
+				3C2079592758B83000C03D91 /* Dependecies */,
 				E5ACF8C72755DB6C009530E3 /* ListAssembly.swift */,
 			);
 			path = Assembly;
@@ -304,6 +318,7 @@
 		E5BD05EC2754ACB60043B6EE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3C20795A2758B85A00C03D91 /* InterviewProject-Bridging-Header.h */,
 				E5BD05C52754AC5B0043B6EE /* Assets.xcassets */,
 				E5BD05C72754AC5B0043B6EE /* LaunchScreen.storyboard */,
 				E57AAC72275741C7003A43CF /* Details.storyboard */,
@@ -435,6 +450,7 @@
 				TargetAttributes = {
 					E5BD05B82754AC5A0043B6EE = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					E5BD05CE2754AC5B0043B6EE = {
 						CreatedOnToolsVersion = 13.1;
@@ -535,6 +551,7 @@
 				E57AAC69275727A9003A43CF /* DetailsAssembly.swift in Sources */,
 				E5BD05BD2754AC5A0043B6EE /* AppDelegate.swift in Sources */,
 				E57AAC7527574604003A43CF /* DetailsViewModel.swift in Sources */,
+				3C20795D2758B85B00C03D91 /* ListModuleDependencies.m in Sources */,
 				E57AAC6B275727B6003A43CF /* DetailsViewController.swift in Sources */,
 				E57AAC71275727D4003A43CF /* DetailsRouter.swift in Sources */,
 				E5ACF8D12755EC16009530E3 /* RatesResponse.swift in Sources */,
@@ -716,6 +733,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -732,6 +750,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gpb.InterviewProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "InterviewProject/Resources/InterviewProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -743,6 +763,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -759,6 +780,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gpb.InterviewProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "InterviewProject/Resources/InterviewProject-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

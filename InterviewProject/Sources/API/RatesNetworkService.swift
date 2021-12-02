@@ -3,14 +3,17 @@ import Foundation
 import RxSwift
 
 class RatesNetworkService: RatesNetworkServiceProtocol {
+
+    private let url: URL
+
+    init(url: URL) {
+        self.url = url
+    }
     
     func downloadRates() -> Single<RatesResponse> {
-        
-        let url = URL(string: "https://www.cryptingup.com/api/markets/")!
-        
         return Single<RatesResponse>.create { single in
             
-            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            let task = URLSession.shared.dataTask(with: self.url) { data, response, error in
                     if let error = error {
                         single(.failure(error))
                         return

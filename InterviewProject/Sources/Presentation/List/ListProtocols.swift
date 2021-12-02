@@ -8,7 +8,7 @@ import RxSwift
 
 protocol ListAssemblyProtocol: AnyObject {
     
-    static func createModule(_ navigationController: UINavigationController) -> UIViewController
+    static func createModule(with: ListModuleDependencies) -> UIViewController
 }
 
 
