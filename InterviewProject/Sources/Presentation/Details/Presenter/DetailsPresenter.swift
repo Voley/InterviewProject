@@ -16,6 +16,14 @@ class DetailsPresenter: DetailsViewOutput {
     
     func viewDidLoad() {
         updateData()
+        
+        let a: RateItemDescriptionProtocol = rateItem
+        let b: RateItem = rateItem
+        
+        a.printDescription()
+        b.printDescription()
+        
+        print("oops")
     }
     
     func updateData() {

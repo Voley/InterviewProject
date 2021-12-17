@@ -1,7 +1,11 @@
 
 import Foundation
 
-struct RateItem: Codable {
+struct RateItem: Codable, RateItemDescriptionProtocol {
+    
+    func printDescription() {
+        print("Rate item named \(name), priced: \(price)")
+    }
     
     let name: String
     let price: Double
@@ -15,3 +19,19 @@ struct RateItem: Codable {
         case yesterdayPrice = "price_unconverted"
     }
 }
+
+
+protocol RateItemDescriptionProtocol {
+    var name: String { get }
+    
+    func printDescription()
+}
+
+extension RateItemDescriptionProtocol {
+    
+    func printDescription() {
+        print("Rate Item named \(name)")
+    }
+}
+
+

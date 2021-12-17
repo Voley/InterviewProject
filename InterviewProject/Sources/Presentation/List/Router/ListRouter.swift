@@ -9,7 +9,7 @@ class ListRouter: ListRouterInput {
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
+        
     func showDetailsScreenWith(_ item: RateItem) {
         guard let navController = navigationController else { return }
         let viewController = DetailsAssembly.createModuleWith(item)

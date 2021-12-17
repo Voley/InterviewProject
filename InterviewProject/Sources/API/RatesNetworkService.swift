@@ -2,6 +2,8 @@
 import Foundation
 import RxSwift
 
+// Документация по апи - https://www.cryptingup.com/apidoc/#get-a-specific-asset
+
 class RatesNetworkService: RatesNetworkServiceProtocol {
 
     private let url: URL
@@ -11,6 +13,7 @@ class RatesNetworkService: RatesNetworkServiceProtocol {
     }
     
     func downloadRates() -> Single<RatesResponse> {
+
         return Single<RatesResponse>.create { single in
             
             let task = URLSession.shared.dataTask(with: self.url) { data, response, error in

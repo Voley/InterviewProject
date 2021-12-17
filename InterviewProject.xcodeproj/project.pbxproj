@@ -18,6 +18,7 @@
 		E57AAC73275741C7003A43CF /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57AAC72275741C7003A43CF /* Details.storyboard */; };
 		E57AAC7527574604003A43CF /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57AAC7427574604003A43CF /* DetailsViewModel.swift */; };
 		E57AAC78275747EC003A43CF /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57AAC77275747EC003A43CF /* CurrencyFormatter.swift */; };
+		E57AAC7A2758A4AD003A43CF /* ProfitSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57AAC792758A4AD003A43CF /* ProfitSolver.swift */; };
 		E5ACF8B22754B2E2009530E3 /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5ACF8B12754B2E2009530E3 /* ListProtocols.swift */; };
 		E5ACF8BE2755D92B009530E3 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5ACF8BD2755D92B009530E3 /* ListViewController.swift */; };
 		E5ACF8C02755D934009530E3 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5ACF8BF2755D934009530E3 /* ListPresenter.swift */; };
@@ -39,6 +40,7 @@
 		E5BD05D42754AC5B0043B6EE /* InterviewProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BD05D32754AC5B0043B6EE /* InterviewProjectTests.swift */; };
 		E5BD05DE2754AC5B0043B6EE /* InterviewProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BD05DD2754AC5B0043B6EE /* InterviewProjectUITests.swift */; };
 		E5BD05E02754AC5B0043B6EE /* InterviewProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BD05DF2754AC5B0043B6EE /* InterviewProjectUITestsLaunchTests.swift */; };
+		E5F5424F2768766B0030F8EB /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F5424E2768766B0030F8EB /* Search.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,7 @@
 		E57AAC72275741C7003A43CF /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
 		E57AAC7427574604003A43CF /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		E57AAC77275747EC003A43CF /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		E57AAC792758A4AD003A43CF /* ProfitSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitSolver.swift; sourceTree = "<group>"; };
 		E5ACF8B12754B2E2009530E3 /* ListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
 		E5ACF8BD2755D92B009530E3 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		E5ACF8BF2755D934009530E3 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 		E5BD05D92754AC5B0043B6EE /* InterviewProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterviewProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5BD05DD2754AC5B0043B6EE /* InterviewProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewProjectUITests.swift; sourceTree = "<group>"; };
 		E5BD05DF2754AC5B0043B6EE /* InterviewProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E5F5424E2768766B0030F8EB /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		F013300F853DF148FA0779E7 /* Pods-InterviewProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewProject.release.xcconfig"; path = "Target Support Files/Pods-InterviewProject/Pods-InterviewProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +171,15 @@
 				E57AAC77275747EC003A43CF /* CurrencyFormatter.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E57AAC7B2758AA8C003A43CF /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				E57AAC792758A4AD003A43CF /* ProfitSolver.swift */,
+				E5F5424E2768766B0030F8EB /* Search.swift */,
+			);
+			path = Questions;
 			sourceTree = "<group>";
 		};
 		E5ACF8B32754B315009530E3 /* Router */ = {
@@ -329,6 +342,7 @@
 		E5BD05ED2754ACD70043B6EE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E57AAC7B2758AA8C003A43CF /* Questions */,
 				E5BD05F12754AD490043B6EE /* Presentation */,
 				E5BD05EE2754ACF80043B6EE /* Lifecycle */,
 				E5ACF8C92755DD31009530E3 /* API */,
@@ -548,7 +562,9 @@
 				E5ACF8C02755D934009530E3 /* ListPresenter.swift in Sources */,
 				E57AAC6727572797003A43CF /* DetailsProtocols.swift in Sources */,
 				E57AAC6F275727C9003A43CF /* DetailsInteractor.swift in Sources */,
+				E5F5424F2768766B0030F8EB /* Search.swift in Sources */,
 				E57AAC69275727A9003A43CF /* DetailsAssembly.swift in Sources */,
+				E57AAC7A2758A4AD003A43CF /* ProfitSolver.swift in Sources */,
 				E5BD05BD2754AC5A0043B6EE /* AppDelegate.swift in Sources */,
 				E57AAC7527574604003A43CF /* DetailsViewModel.swift in Sources */,
 				3C20795D2758B85B00C03D91 /* ListModuleDependencies.m in Sources */,
